@@ -1,4 +1,4 @@
-package com.github.hanalee.thingsflowtask.domain.retrofit.entity.response
+package com.github.hanalee.thingsflowtask.domain.remote_source.entity.response
 
 
 import android.os.Parcelable

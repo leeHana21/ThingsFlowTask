@@ -1,6 +1,6 @@
-package com.github.hanalee.thingsflowtask.domain.retrofit
+package com.github.hanalee.thingsflowtask.domain.remote_source
 
-import com.github.hanalee.thingsflowtask.domain.retrofit.entity.response.IssueResponse
+import com.github.hanalee.thingsflowtask.domain.remote_source.entity.response.IssueResponse
 import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.Path

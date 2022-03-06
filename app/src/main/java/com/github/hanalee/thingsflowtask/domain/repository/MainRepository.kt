@@ -1,6 +1,6 @@
 package com.github.hanalee.thingsflowtask.domain.repository
 
-import com.github.hanalee.thingsflowtask.domain.retrofit.MainApiClient
+import com.github.hanalee.thingsflowtask.domain.remote_source.MainApiClient
 
 
 class MainRepository {

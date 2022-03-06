@@ -1,13 +1,11 @@
-package com.github.hanalee.thingsflowtask.domain.viewmodel
+package com.github.hanalee.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.github.hanalee.thingsflowtask.domain.repository.MainRepository
-import com.github.hanalee.thingsflowtask.domain.retrofit.entity.response.IssueResponse
-import com.github.hanalee.thingsflowtask.utils.UtilFunction.Companion.TAG
+import com.github.hanalee.thingsflowtask.domain.remote_source.entity.response.IssueResponse
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
 import org.koin.core.component.KoinComponent

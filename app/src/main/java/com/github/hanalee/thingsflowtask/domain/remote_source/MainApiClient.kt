@@ -1,4 +1,4 @@
-package com.github.hanalee.thingsflowtask.domain.retrofit
+package com.github.hanalee.thingsflowtask.domain.remote_source
 
 import com.github.hanalee.thingsflowtask.utils.UtilFunction.Companion.httpLoggingInterceptor
 import com.google.gson.GsonBuilder

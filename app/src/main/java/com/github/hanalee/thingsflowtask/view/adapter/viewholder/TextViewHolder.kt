@@ -3,7 +3,7 @@ package com.github.hanalee.thingsflowtask.view.adapter.viewholder
 import android.content.Intent
 import androidx.recyclerview.widget.RecyclerView
 import com.github.hanalee.thingsflowtask.databinding.RecyclerviewTextItemBinding
-import com.github.hanalee.thingsflowtask.domain.retrofit.entity.response.IssueResponse
+import com.github.hanalee.thingsflowtask.domain.remote_source.entity.response.IssueResponse
 import com.github.hanalee.thingsflowtask.view.IssueDetailActivity
 
 

@@ -3,10 +3,9 @@ package com.github.hanalee.thingsflowtask.view
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import com.bumptech.glide.Glide
 import com.github.hanalee.thingsflowtask.R
 import com.github.hanalee.thingsflowtask.databinding.ActivityIssueDetailBinding
-import com.github.hanalee.thingsflowtask.domain.retrofit.entity.response.IssueResponse
+import com.github.hanalee.thingsflowtask.domain.remote_source.entity.response.IssueResponse
 
 class IssueDetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityIssueDetailBinding
