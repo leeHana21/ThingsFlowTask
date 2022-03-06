@@ -12,21 +12,16 @@ import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
-import retrofit2.HttpException
 
 class MainViewModel : ViewModel(), KoinComponent {
     private val mainRepository: MainRepository by inject()
 
     private val handler = CoroutineExceptionHandler { _, exception ->
-        _noData.value = Pair(true,exception)
+        _noData.value = Pair(true, exception)
     }
 
-    private val _apiMsg = MutableLiveData<Any>()
-    val apiMsg: LiveData<Any>
-        get() = _apiMsg
-
-    private val _issueList = MutableLiveData<Pair<IssueResponse,String>>()
-    val issueList: LiveData<Pair<IssueResponse,String>>
+    private val _issueList = MutableLiveData<Pair<IssueResponse, String>>()
+    val issueList: LiveData<Pair<IssueResponse, String>>
         get() = _issueList
 
     private val _noData = MutableLiveData<Pair<Boolean, Throwable?>>()
@@ -44,11 +39,10 @@ class MainViewModel : ViewModel(), KoinComponent {
     private fun getIssueFromRemote(org: String? = "google", repo: String? = "dagger") =
         viewModelScope.launch(handler) {
             val response = mainRepository.getIssues(org!!, repo!!)
-            Log.d(TAG, "getIssueFromRemote: $response")
             if (response.size == 0) {
                 _noData.value = Pair(true, Throwable("검색된 데이터가 없습니다"))
             } else {
-                _issueList.value = Pair(response,"$org/$repo")
+                _issueList.value = Pair(response, "$org/$repo")
             }
         }
 }

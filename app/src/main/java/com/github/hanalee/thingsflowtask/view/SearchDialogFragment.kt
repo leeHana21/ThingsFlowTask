@@ -18,10 +18,7 @@ class SearchDialogFragment : DialogFragment() {
     ): View {
         binding = SearchDialogBinding.inflate(layoutInflater)
         val view = binding.root
-
         dialog?.window?.requestFeature(Window.FEATURE_NO_TITLE)
-        //dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-
         return view
     }
 
