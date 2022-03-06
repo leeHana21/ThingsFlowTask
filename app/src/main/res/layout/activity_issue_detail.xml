@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="issue"
+            type="com.github.hanalee.thingsflowtask.domain.retrofit.entity.response.IssueResponse.IssueItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.IssueDetailActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/tv_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{issue.user.login, default=defaults}"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toBottomOf="@id/iv_profile"
+            app:layout_constraintLeft_toRightOf="@+id/iv_profile"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_profile" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_profile">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:text="@{issue.body, default=defaults}" />
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
