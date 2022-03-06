@@ -4,7 +4,7 @@ import android.content.DialogInterface
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.github.hanalee.thingsflowtask.databinding.ActivityMainBinding
-import com.github.hanalee.viewmodel.MainViewModel
+import com.github.hanalee.thingsflowtask.viewmodel.MainViewModel
 import com.github.hanalee.thingsflowtask.extension.toGone
 import com.github.hanalee.thingsflowtask.extension.toInvisible
 import com.github.hanalee.thingsflowtask.extension.toVisible

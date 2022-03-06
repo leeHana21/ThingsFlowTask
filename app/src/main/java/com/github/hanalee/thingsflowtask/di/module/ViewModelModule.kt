@@ -1,6 +1,6 @@
 package com.github.hanalee.thingsflowtask.di.module
 
-import com.github.hanalee.viewmodel.MainViewModel
+import com.github.hanalee.thingsflowtask.viewmodel.MainViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

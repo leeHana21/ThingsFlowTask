@@ -1,4 +1,4 @@
-package com.github.hanalee.viewmodel
+package com.github.hanalee.thingsflowtask.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
