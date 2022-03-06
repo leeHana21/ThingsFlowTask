@@ -26,9 +26,9 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_name"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:paddingStart="10dp"
             android:paddingEnd="0dp"
-            android:layout_height="wrap_content"
             android:text="@{issue.user.login, default=defaults}"
             android:textAlignment="textStart"
             app:layout_constraintBottom_toBottomOf="@id/iv_profile"
@@ -45,8 +45,8 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="textStart"
-                android:text="@{issue.body, default=defaults}" />
+                android:text="@{issue.body, default=defaults}"
+                android:textAlignment="textStart" />
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
